@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella| Premium Laundry & Dry Cleaning Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #55b699;
+            --primary-dark: #3e947b;
+            --secondary: #0f172a;
+            --bg-light: #f0fdfa;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .font-heading { font-family: 'Outfit', sans-serif; }
+
+        .service-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(85, 182, 153, 0.15);
+        }
+
+        .hero-blob {
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+
+        .step-line::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            width: 100%;
+            border-top: 2px dashed #cbd5e1;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .step-line::after { display: none; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+   <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-teal-100">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-[#55b699] rounded-lg flex items-center justify-center text-white font-bold">Z</div>
+            <span class="text-2xl font-extrabold tracking-tight">Bella<span class="text-[#55b699]">Laundry</span></span>
+        </div>
+        <div class="hidden md:flex space-x-8 font-semibold text-slate-600">
+            <a href="#services" class="hover:text-[#55b699] transition">Services</a>
+            <a href="#how-it-works" class="hover:text-[#55b699] transition">How it Works</a>
+            <a href="#reviews" class="hover:text-[#55b699] transition">Reviews</a>
+        </div>
+        <a href="#order" class="bg-[#55b699] text-white px-6 py-3 rounded-full font-bold hover:bg-[#3e947b] transition shadow-lg shadow-teal-100">
+            Order Pickup - <span id="discountPrice">₦0</span>
+        </a>
+    </div>
+</nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 bg-[#f0fdfa] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="relative z-10">
+                <div class="inline-flex items-center gap-2 bg-teal-100 text-[#3e947b] px-4 py-1.5 rounded-full text-sm font-bold mb-6">
+                    ✨ Serving 10,000+ Happy Customers Since 2000
+                </div>
+                <h1 class="font-heading text-5xl lg:text-7xl font-bold leading-tight mb-6">
+                    Spend More Time Living, <span class="text-[#55b699]">Less Time Laundering.</span>
+                </h1>
+                <p class="text-xl text-slate-600 mb-10 max-w-lg">
+                    Premium laundry, dry cleaning, and cloth sewing services delivered to your doorstep. We handle the dirty work so you don't have to.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#order" class="bg-slate-900 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-black transition text-center">
+                        Schedule Pickup Now
+                    </a>
+                    <div class="flex items-center gap-3 px-4">
+                        <div class="text-[#55b699] text-2xl font-bold">4.9/5</div>
+                        <div class="text-sm text-slate-500 font-medium">Customer <br> Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -top-10 -right-10 w-64 h-64 bg-teal-200 rounded-full blur-3xl opacity-50"></div>
+                <div class="relative rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl">
+                    <img src="https://media.istockphoto.com/id/2234629305/photo/stack-of-knitted-folded-clothes-on-table-knittings-pile-autumn-clothing-heap-woolen-sweaters.jpg?s=1024x1024&w=is&k=20&c=6zPIwRigG7y0aGh_2UUKAZd6qfQ2bUhFLBYgAa90__4=" alt="Laundry Service" class="w-full h-auto">
+                </div>
+                <div class="absolute bottom-10 -left-10 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4">
+                    <div class="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-2xl">⚡</div>
+                    <div>
+                        <p class="font-bold">24-Hour</p>
+                        <p class="text-sm text-slate-500">Fast Turnaround</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-4xl font-bold mb-4">Every Laundry Service You Need</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">We provide professional cleaning solutions for all your garments, from everyday wear to delicate wedding attire.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-slate-50 p-8 rounded-3xl text-center service-card border border-slate-100">
+                    <div class="text-4xl mb-4">👔</div>
+                    <h3 class="font-bold text-lg mb-2">Dry Cleaning</h3>
+                    <p class="text-sm text-slate-500">Eco-friendly solvent cleaning for delicate fabrics.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl text-center service-card border border-slate-100">
+                    <div class="text-4xl mb-4">🧺</div>
+                    <h3 class="font-bold text-lg mb-2">Wash & Fold</h3>
+                    <p class="text-sm text-slate-500">Everyday laundry, cleaned, dried, and perfectly folded.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl text-center service-card border border-slate-100">
+                    <div class="text-4xl mb-4">💨</div>
+                    <h3 class="font-bold text-lg mb-2">Steam Ironing</h3>
+                    <p class="text-sm text-slate-500">Crisp, wrinkle-free finishing for professional looks.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl text-center service-card border border-slate-100">
+                    <div class="text-4xl mb-4">🧵</div>
+                    <h3 class="font-bold text-lg mb-2">Cloth Sewing</h3>
+                    <p class="text-sm text-slate-500">Expert alterations and bespoke tailoring services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="py-24 bg-[#55b699] text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="font-heading text-4xl font-bold mb-4">Fresh Clothes in 4 Simple Steps</h2>
+                <p class="text-teal-50">Our streamlined process makes laundry day disappear.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-12 relative">
+                <div class="text-center relative">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 backdrop-blur-md border border-white/30 relative z-10">📱</div>
+                    <h4 class="font-bold text-xl mb-2">Book Pickup</h4>
+                    <p class="text-teal-50 text-sm">Schedule a time via our mobile app or website.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 backdrop-blur-md border border-white/30 relative z-10">🚚</div>
+                    <h4 class="font-bold text-xl mb-2">We Collect</h4>
+                    <p class="text-teal-50 text-sm">Our driver arrives at your door to pick up items.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 backdrop-blur-md border border-white/30 relative z-10">🧼</div>
+                    <h4 class="font-bold text-xl mb-2">We Clean</h4>
+                    <p class="text-teal-50 text-sm">Expert treatment following your specific instructions.</p>
+                </div>
+                <div class="text-center relative">
+                    <div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-6 backdrop-blur-md border border-white/30 relative z-10">✨</div>
+                    <h4 class="font-bold text-xl mb-2">We Deliver</h4>
+                    <p class="text-teal-50 text-sm">Fresh, clean clothes delivered within 24 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="font-heading text-4xl font-bold mb-4">What Our Customers Say</h2>
+                    <p class="text-slate-500">Join thousands of satisfied locals who trust Zelard.</p>
+                </div>
+                <div class="flex gap-2">
+                    <div class="text-yellow-400 text-xl">★★★★★</div>
+                    <span class="font-bold italic">Top Rated in Lagos</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-slate-50 rounded-[2rem] border border-slate-100">
+                    <p class="text-slate-600 mb-6 italic">"The app is so easy to use! They picked up my suits at 10 AM and had them back by the next morning. Absolutely life-changing."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/059/842/236/small/a-black-man-in-a-suit-and-tie-photo.jpg" class="w-12 h-12 rounded-full border-2 border-[#55b699]" alt="User">
+                        <div>
+                            <p class="font-bold">France Miller</p>
+                            <p class="text-xs text-slate-400 uppercase">Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 bg-white rounded-[2rem] border border-slate-200 shadow-xl shadow-slate-100">
+                    <p class="text-slate-600 mb-6 italic">"Best alterations in town. I had a wedding dress that needed urgent adjustments and they handled it with incredible skill."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/074/189/886/small/an-expressive-black-woman-gazes-thoughtfully-illuminated-by-soft-evening-light-photo.jpeg" class="w-12 h-12 rounded-full border-2 border-[#55b699]" alt="User">
+                        <div>
+                            <p class="font-bold">Vicent Oswald</p>
+                            <p class="text-xs text-slate-400 uppercase">Chief Architect</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-8 bg-slate-50 rounded-[2rem] border border-slate-100">
+                    <p class="text-slate-600 mb-6 italic">"I never have to worry about my white shirts anymore. They come back whiter than when I bought them. Highly recommend!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/056/505/132/small/a-woman-in-a-business-suit-with-her-arms-crossed-free-photo.jpeg" class="w-12 h-12 rounded-full border-2 border-[#55b699]" alt="User">
+                        <div>
+                            <p class="font-bold">Monica Buzzer</p>
+                            <p class="text-xs text-slate-400 uppercase">Marketing Lead</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="order" class="py-24 bg-[#f0fdfa]">
+    <div class="max-w-4xl mx-auto px-6 bg-white p-12 rounded-[3rem] shadow-2xl text-center border border-teal-50">
+        <h2 class="font-heading text-4xl font-bold mb-6">Ready for Fresh Clothes?</h2>
+        <p class="text-slate-500 mb-10">Claim <span class="text-[#55b699] font-bold underline">20% OFF</span> your first order when you book today.</p>
+        <form id="orderForm" class="space-y-4 max-w-md mx-auto">
+            <select id="serviceSelect" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-[#55b699] outline-none">
+                <option value="5000">Dry Cleaning - ₦5000</option>
+                <option value="3000">Wash & Fold - ₦3000</option>
+                <option value="2000">Steam Ironing - ₦2000</option>
+                <option value="4000">Cloth Sewing - ₦4000</option>
+            </select>
+            <input type="text" placeholder="Full Name" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-[#55b699] outline-none">
+            <input type="tel" placeholder="Phone Number" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-[#55b699] outline-none">
+            <input type="date" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-[#55b699] outline-none">
+            <input type="time" class="w-full px-6 py-4 bg-slate-50 border border-slate-200 rounded-2xl focus:ring-2 focus:ring-[#55b699] outline-none">
+            <button class="w-full bg-[#55b699] text-white py-5 rounded-2xl font-bold text-lg hover:bg-[#3e947b] transition shadow-lg shadow-teal-100">
+                Claim My Discount
+            </button>
+        </form>
+    </div>
+</section>
+
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-[#55b699] rounded-md flex items-center justify-center text-white font-bold text-sm">Z</div>
+                    <span class="text-xl font-bold tracking-tight">Bella<span class="text-[#55b699]">Laundry</span></span>
+                </div>
+                <p class="text-slate-400">Professional laundry and textile care specialists. Quality you can wear.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-slate-400">
+                    <li><a href="#" class="hover:text-[#55b699]">Price List</a></li>
+                    <li><a href="#" class="hover:text-[#55b699]">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-[#55b699]">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Contact Us</h4>
+                <p class="text-slate-400 mb-2">📍 45 Marina, Lagos Island, Lagos</p>
+                <p class="text-slate-400">📞 +234 801 024 9283</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-12 mt-12 border-t border-white/5 text-center text-slate-500 text-xs">
+            © 2026  Bella Laundry Services. Designed for High Conversion.
+        </div>
+    </footer>
+
+    <script>
+        // Form Success Handling
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.innerHTML = 'Booking Success! ✨';
+            btn.style.backgroundColor = '#10b981';
+            setTimeout(() => {
+                this.reset();
+                btn.innerHTML = 'Claim My Discount';
+                btn.style.backgroundColor = '#55b699';
+            }, 3000);
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
